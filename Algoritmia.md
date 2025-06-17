@@ -40,14 +40,8 @@
 
 </br>
 
-9. Detector de Palíndromos Numéricos en Base N
-    > Verificar si un número es palíndromo cuando se convierte a una base específica (base 2, 8, 16, etc.).
-
-</br>
-
 10. Calculadora de Índice de Masa Corporal (IMC)
     > Calcular IMC = peso/(altura²) y clasificar: Bajo peso, Normal, Sobrepeso, Obesidad.
-
 
 </br>
 

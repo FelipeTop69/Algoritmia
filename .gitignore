@@ -1,0 +1,41 @@
+# Ignore bin and obj folders from both projects
+**/bin/
+**/obj/
+
+# Ignore user-specific files from Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build results
+*.exe
+*.dll
+*.pdb
+
+# Ignore Rider and VS Code settings
+.idea/
+.vscode/
+.vs/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+# If using package reference instead of packages.config, you can ignore this:
+project.lock.json
+project.assets.json
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore other potential generated files
+*.cache
+*.bak
+
+# Optional: Ignore docs if not needed
+*.docx
