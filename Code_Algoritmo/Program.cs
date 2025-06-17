@@ -10,7 +10,7 @@ namespace EjerciciosAlgoritmia
             List<int> divisores = [];
             for (int i = 1; i < numero; i++)
             {
-                if (numero % i == 0)
+                if (numero % i == 0)    
                     divisores.Add(i);
             }
 
@@ -93,7 +93,7 @@ namespace EjerciciosAlgoritmia
                     int nuevaPosicion = (posicion + desplazamiento) % 26;
                     if (nuevaPosicion < 0) 
                         nuevaPosicion += 26;
-                        resultado.Append((char)(baseChar + nuevaPosicion));
+                    resultado.Append((char)(baseChar + nuevaPosicion));
                 }
                 else
                 {
@@ -229,8 +229,10 @@ namespace EjerciciosAlgoritmia
                 }
 
                 if (repetida == texto)
+                {
                     return subcadena;
-            }
+                }
+            }   
             return texto;
         }
 
@@ -402,7 +404,7 @@ namespace EjerciciosAlgoritmia
 
             // 16. Dados Múltiples
             //Console.WriteLine("16. Simulación de Dados (2 dados, 100 lanzamientos):");
-            //var resultadosDados = SolucionesAlgoritmia.SimularDados(2, 100);
+            //var resultadosDados = SolucionesAlgoritmia.SimularDados(2, 10);
             //foreach (var kvp in resultadosDados.OrderBy(x => x.Key))
             //{
             //    Console.WriteLine($"Suma {kvp.Key}: {kvp.Value} veces");

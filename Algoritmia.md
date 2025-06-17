@@ -20,17 +20,17 @@
 
 </br>
 
-5. Cifrado César Simple
+5. Cifrado César ASCII
     > Implementar cifrado César: desplazar cada letra del alfabeto N posiciones. Ejemplo: "ABC" con desplazamiento 1 = "BCD".
 
 </br>
 
-6. Calculadora de Resistencias en Serie/Paralelo
+6. Calculadora de Resistencias 
     > Calcular la resistencia total de un circuito con resistencias en serie (suma) o paralelo (1/(1/R1 + 1/R2 + ...)).
 
 </br>
 
-7. Verificar Sudoku Parcial
+7. Verificar Sudoku 
     > Dada una fila, columna o cuadrícula 3x3 de Sudoku, verificar si cumple las reglas (números del 1-9 sin repetir).
 
 </br>
@@ -45,12 +45,12 @@
 
 </br>
 
-11. Generador de Patrones ASCII
+11. Generador de Patrones ASCII Simple
     > Crear patrones geométricos con caracteres ASCII. Ejemplo: triángulos, rombos, escaleras.
 
 </br>
 
-12. Simulador de Lanzamiento de Proyectil
+12. Simulador de Lanzamiento de Proyectil Simple
     > Calcular alcance y altura máxima de un proyectil dados velocidad inicial y ángulo.
 
 </br>
@@ -70,12 +70,12 @@
 
 </br>
 
-16. Simulador de Juego de Dados Múltiples
+16. Juego de Dados Múltiples
     > Simular lanzamiento de N dados y calcular probabilidades de obtener sumas específicas.
 
 </br>
 
-17. Conversor de Tiempo Unix
+17. Conversor de Tiempo Unix 
     > Convertir timestamp Unix (segundos desde 1970) a fecha legible y viceversa.
 
 </br>
