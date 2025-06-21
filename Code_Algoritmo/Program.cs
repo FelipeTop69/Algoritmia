@@ -4,7 +4,7 @@ namespace EjerciciosAlgoritmia
 {
     public class SolucionesAlgoritmia
     {
-        // 1. Verificar Número Autocompuesto
+        // 1. Verificar Número Autocompuesto - Complejo 
         public static bool EsNumeroAutocompuesto(int numero)
         {
             List<int> divisores = [];
@@ -26,7 +26,7 @@ namespace EjerciciosAlgoritmia
             return false;
         }
 
-        // 2. Calculadora de Distancia Manhattan
+        // 2. Calculadora de Distancia Manhattan - Facil
         public static int DistanciaManhattan(int x1, int y1, int x2, int y2)
         {
             int valorAbsX = Math.Abs(x1 - x2);
@@ -35,23 +35,7 @@ namespace EjerciciosAlgoritmia
             return distManhattan;
         }
 
-        // 3. Generador de Secuencia Tribonacci
-        public static List<long> GenerarTribonacci(int n)
-        {
-            List<long> secuencia = new List<long>();
-            if (n >= 1) secuencia.Add(0);
-            if (n >= 2) secuencia.Add(0);
-            if (n >= 3) secuencia.Add(1);
-
-            for (int i = 3; i < n; i++)
-            {
-                long siguiente = secuencia[i - 1] + secuencia[i - 2] + secuencia[i - 3];
-                secuencia.Add(siguiente);
-            }
-            return secuencia;
-        }
-
-        // 4. Detector de Números Vampiro
+        // 4. Detector de Números Vampiro - Complejo
         public static bool EsNumeroVampiro(int numero)
         {
             if (numero < 1000 || numero > 9999) return false;
@@ -78,32 +62,7 @@ namespace EjerciciosAlgoritmia
             return string.Concat(str1.OrderBy(c => c)) == string.Concat(str2.OrderBy(c => c));
         }
 
-        // 5. Cifrado César 
-        public static string CifradoCesar(string text, int desplazamiento)
-        {
-            StringBuilder resultado = new StringBuilder();
-            desplazamiento = desplazamiento % 26;
-
-            foreach (char c in text)
-            {
-                if (char.IsLetter(c))
-                {
-                    char baseChar = char.IsUpper(c) ? 'A' : 'a';
-                    int posicion = c - baseChar;
-                    int nuevaPosicion = (posicion + desplazamiento) % 26;
-                    if (nuevaPosicion < 0) 
-                        nuevaPosicion += 26;
-                    resultado.Append((char)(baseChar + nuevaPosicion));
-                }
-                else
-                {
-                    resultado.Append(c);
-                }
-            }
-            return resultado.ToString();
-        }
-
-        // 6. Calculadora de Resistencias en Serie/Paralelo
+        // 6. Calculadora de Resistencias en Serie/Paralelo - Facil
         public static double CalcularResistencia(double[] resistencias, bool enSerie)
         {
             if (enSerie)
@@ -121,7 +80,7 @@ namespace EjerciciosAlgoritmia
             }
         }
 
-        // 7. Verificar Sudoku Parcial
+        // 7. Verificar Sudoku Parcial - Complejo
         public static bool VerificarSudokuParcial(int[] numeros)
         {
             HashSet<int> vistos = new HashSet<int>();
@@ -137,7 +96,7 @@ namespace EjerciciosAlgoritmia
             return true;
         }
 
-        // 8. Simulador de Crecimiento Poblacional
+        // 8. Simulador de Crecimiento Poblacional - Complejo
         public static double CalcularCrecimientoPoblacional(double poblacionInicial,
             double tasaNatalidad, double tasaMortalidad, int años)
         {
@@ -151,7 +110,7 @@ namespace EjerciciosAlgoritmia
             return Math.Round(poblacion, 2);
         }
 
-        // 10. Calculadora de Índice de Masa Corporal (IMC)
+        // 10. Calculadora de Índice de Masa Corporal (IMC) - Facil
         public static (double imc, string clasificacion) CalcularIMC(double peso, double altura)
         {
             double imc = peso / (altura * altura);
@@ -165,20 +124,7 @@ namespace EjerciciosAlgoritmia
             return (Math.Round(imc, 2), clasificacion);
         }
 
-        // 11. Generador de Patrones ASCII
-        public static void GenerarPatronTriangulo(int altura)
-        {
-            for (int i = 1; i <= altura; i++)
-            {
-                for (int j = 0; j < altura - i; j++)
-                    Console.Write(" ");
-                for (int k = 0; k < 2 * i - 1; k++)
-                    Console.Write("*");
-                Console.WriteLine();
-            }
-        }
-
-        // 12. Simulador de Lanzamiento de Proyectil
+        // 12. Simulador de Lanzamiento de Proyectil - Facil
         public static (double alcance, double alturaMaxima) CalcularProyectil(
             double velocidadInicial, double angulo)
         {
@@ -192,7 +138,7 @@ namespace EjerciciosAlgoritmia
             return (Math.Round(alcance, 2), Math.Round(alturaMaxima, 2));
         }
 
-        // 13. Verificador de Formato de Email Básico
+        // 13. Verificador de Formato de Email Básico - Facil
         public static bool ValidarEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email)) return false;
@@ -209,13 +155,13 @@ namespace EjerciciosAlgoritmia
                 || c == '@' || c == '.' || c == '_' || c == '-');
         }
 
-        // 14. Calculadora de Interés Compuesto
+        // 14. Calculadora de Interés Compuesto - Facil
         public static double CalcularInteresCompuesto(double principal, double tasa, int tiempo)
         {
             return Math.Round(principal * Math.Pow(1 + tasa / 100, tiempo), 2);
         }
 
-        // 15. Detector de Subcadenas Repetitivas
+        // 15. Detector de Subcadenas Repetitivas - Complejo
         public static string EncontrarSubcadenaRepetitiva(string texto)
         {
             for (int longitud = 1; longitud <= texto.Length / 2; longitud++)
@@ -236,7 +182,7 @@ namespace EjerciciosAlgoritmia
             return texto;
         }
 
-        // 16. Simulador de Juego de Dados Múltiples
+        // 16. Simulador de Juego de Dados Múltiples - Complejo
         public static Dictionary<int, int> SimularDados(int numDados, int numLanzamientos)
         {
             Random random = new Random();
@@ -259,21 +205,7 @@ namespace EjerciciosAlgoritmia
             return resultados;
         }
 
-        // 17. Conversor de Tiempo Unix
-        public static string ConvertirUnixAFecha(long timestamp)
-        {
-            DateTime fecha = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            fecha = fecha.AddSeconds(timestamp);
-            return fecha.ToString("dd/MM/yyyy HH:mm:ss");
-        }
-
-        public static long ConvertirFechaAUnix(DateTime fecha)
-        {
-            DateTime unix = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            return (long)(fecha.ToUniversalTime() - unix).TotalSeconds;
-        }
-
-        // 18. Calculadora de Área de Polígonos Regulares
+        // 18. Calculadora de Área de Polígonos Regulares - Facil
         public static double CalcularAreaPoligonoRegular(int numLados, double longitudLado)
         {
             double angulo = Math.PI / numLados;
@@ -281,21 +213,7 @@ namespace EjerciciosAlgoritmia
             return Math.Round(area, 2);
         }
 
-        // 19. Detector de Anagramas Multi-palabra
-        public static bool SonAnagramas(string frase1, string frase2)
-        {
-            string limpia1 = LimpiarFrase(frase1);
-            string limpia2 = LimpiarFrase(frase2);
-
-            return string.Concat(limpia1.OrderBy(c => c)) == string.Concat(limpia2.OrderBy(c => c));
-        }
-
-        private static string LimpiarFrase(string frase)
-        {
-            return new string(frase.Where(c => char.IsLetter(c)).Select(c => char.ToLower(c)).ToArray());
-        }
-
-        // 20. Simulador de Sistema de Calificaciones Ponderadas
+        // 20. Simulador de Sistema de Calificaciones Ponderadas - Complejo
         public static double CalcularPromedioPonderado(double[] calificaciones, double[] pesos)
         {
             if (calificaciones.Length != pesos.Length) return 0;
