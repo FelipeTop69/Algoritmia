@@ -485,24 +485,17 @@ namespace EjerciciosAlgoritmia
         }
 
         // 30. Ajustador de Arreglos por Mitades
-        public static int AjustarPorMitades(int[] lista)
+        public static int AjustesMitades(int[] arreglo)
         {
-            if (lista.Length % 2 != 0)
-                return -1;
+            if (arreglo.Length % 2 != 0) return -1;
 
-            int mitad = lista.Length / 2;
+            int mitad = arreglo.Length / 2;
             int suma1 = 0, suma2 = 0;
-
-            for (int i = 0; i < mitad; i++)
-                suma1 += lista[i];
-
-            for (int i = mitad; i < lista.Length; i++)
-                suma2 += lista[i];
+            for (int i = 0; i < mitad; i++) suma1 += arreglo[i];
+            for (int i = mitad; i < arreglo.Length; i++) suma2 += arreglo[i];
 
             int diferencia = Math.Abs(suma1 - suma2);
-
-            if (diferencia % 2 != 0)
-                return -1;
+            if (diferencia % 2 != 0) return -1;
 
             return diferencia / 2;
         }
@@ -510,7 +503,7 @@ namespace EjerciciosAlgoritmia
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             Console.WriteLine("=== EJERCICIOS DE ALGORITMIA ===\n");
 
@@ -659,8 +652,8 @@ namespace EjerciciosAlgoritmia
             //Console.WriteLine(SolucionesAlgoritmia.EsImpulsoAlterno(new int[] { 1, 3, 3, 4, 3 })); // false
 
             //Console.WriteLine("30. Ajustador de Arreglos por Mitades:");
-            //int[] listaAjustar = { 1, 2, 3, 4 };
-            //Console.WriteLine($"Ajustes necesarios: {SolucionesAlgoritmia.AjustarPorMitades(listaAjustar)}\n");
+            //Console.WriteLine(SolucionesAlgoritmia.AjustesMitades(new int[] { 3, 4, 5, 2 })); // 0
+            //Console.WriteLine(SolucionesAlgoritmia.AjustesMitades(new int[] { 1, 2, 3, 9 })); // 2
 
             Console.WriteLine("\n=== FIN DE LAS PRUEBAS ===");
             Console.ReadKey();
