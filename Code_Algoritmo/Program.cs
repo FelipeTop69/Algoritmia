@@ -589,7 +589,7 @@ namespace EjerciciosAlgoritmia
 
             // 16. Dados Múltiples
             //Console.WriteLine("16. Simulación de Dados (2 dados, 100 lanzamientos):");
-            //var resultadosDados = SolucionesAlgoritmia.SimularDados(2, 10);
+            //var resultadosDados = SolucionesAlgoritmia.SimularDados(2, 100);
             //foreach (var kvp in resultadosDados.OrderBy(x => x.Key))
             //{
             //    Console.WriteLine($"Suma {kvp.Key}: {kvp.Value} veces");
